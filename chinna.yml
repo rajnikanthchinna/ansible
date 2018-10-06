@@ -1,0 +1,10 @@
+---
+- hosts: all
+  become: yes
+  tasks:
+  - name: ping all nodes
+    ping:
+  - name: my install apache2
+    apt:
+      name: apache2
+      state: present
