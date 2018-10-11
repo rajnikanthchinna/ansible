@@ -1,2 +1,11 @@
 ---
 # tasks file for mytom7installrole
+- neme: install tomacat7 on redhat 
+  yum:
+    name: tomcat
+    state: present
+
+    - name: copy the tomcat config file into all nodes
+      template: 
+        src: templates/tomconfig.j2
+        
